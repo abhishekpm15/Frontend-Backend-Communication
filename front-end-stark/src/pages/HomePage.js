@@ -17,7 +17,8 @@ const HomePage = () => {
   const sendData = () => {
     axios({
       method: "post",
-      baseURL: "https://backend-app-production-9376.up.railway.app/",
+      baseURL: "https://backend-app-production-80cd.up.railway.app/",
+      url:"/api",
       data: inputHandler,
     })
       .then(function (response) {
