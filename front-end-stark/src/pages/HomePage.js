@@ -17,8 +17,7 @@ const HomePage = () => {
   const sendData = () => {
     axios({
       method: "post",
-      baseURL: "http://localhost:3001",
-      url: "/api",
+      baseURL: "https://backend-app-production-9376.up.railway.app/",
       data: inputHandler,
     })
       .then(function (response) {
