@@ -7,6 +7,7 @@ const helmet = require("helmet");
 const mongoose = require("mongoose");
 const path = require("path");
 require('dotenv').config();
+mongoose.set('strictQuery', false);
 mongoose
   .connect(
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tn0wwt0.mongodb.net/?retryWrites=true&w=majority`
