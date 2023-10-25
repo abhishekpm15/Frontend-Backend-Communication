@@ -11,7 +11,7 @@ const DataPage = () => {
 
   const handleEdit = (index, id) => {
     axios
-      .get(`http://localhost:3001/get-data/${id}`)
+      .get(`https://backend-app-production-96e7.up.railway.app/get-data/${id}`)
       .then((response) => {
         console.log(response.data);
         const data = response.data;
@@ -25,7 +25,7 @@ const DataPage = () => {
   const handleDelete = (index, id) => {
     console.log(index);
     axios
-      .delete(`http://localhost:3001/delete-data/${id}`)
+      .delete(`https://backend-app-production-96e7.up.railway.app/delete-data/${id}`)
       .then((response) => {
         console.log(response.data);
           toast.error("Successfully deleted the data !");
@@ -37,7 +37,7 @@ const DataPage = () => {
   };
 
   const getData = () => {
-    axios.get("http://localhost:3001/get-data").then((response) => {
+    axios.get("https://backend-app-production-96e7.up.railway.app/get-data").then((response) => {
       console.log(response.data);
       if(response.data.length === 0)
         toast.error("No data found !");

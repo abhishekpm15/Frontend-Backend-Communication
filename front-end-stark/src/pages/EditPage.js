@@ -20,7 +20,7 @@ const EditPage = () => {
   const sendData = () => {
     axios({
       method: "patch",
-      baseURL: "http://localhost:3001",
+      baseURL: "https://backend-app-production-96e7.up.railway.app",
       url: `/modify-api/${location.state.data._id}`,
       data: inputHandler,
     })
